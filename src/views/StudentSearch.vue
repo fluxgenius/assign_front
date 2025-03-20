@@ -156,7 +156,7 @@ export default {
     async searchSubmissions() {
       this.loading = true
       try {
-        const res = await axios.get(`http://localhost:5000/api/submissions/student/${this.email}`)
+        const res = await axios.get(`https://assign-back-675i.onrender.com/api/submissions/student/${this.email}`)
         this.submissions = res.data
         if (this.submissions.length === 0) {
           this.$toast.info('No submissions found for this email.')

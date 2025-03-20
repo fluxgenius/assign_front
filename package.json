@@ -12,6 +12,7 @@
     "@tailwindcss/vite": "^4.0.14",
     "axios": "^1.8.3",
     "tailwindcss": "^4.0.14",
+    "vite-project": "file:",
     "vue": "^3.4.29",
     "vue-router": "^4.5.0",
     "vue-toast-notification": "^3.1.3"

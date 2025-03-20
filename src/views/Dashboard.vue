@@ -187,7 +187,7 @@ export default {
       this.loading = true
       try {
         const token = localStorage.getItem('token')
-        const res = await axios.get('http://localhost:5000/api/submissions', {
+        const res = await axios.get('https://assign-back-675i.onrender.com/api/submissions', {
           headers: { Authorization: `Bearer ${token}` },
         })
         this.submissions = res.data
@@ -200,7 +200,7 @@ export default {
     async approveSubmission(id) {
       try {
         const token = localStorage.getItem('token')
-        await axios.put(`http://localhost:5000/api/submissions/${id}/approve`, {}, {
+        await axios.put(`https://assign-back-675i.onrender.com/api/submissions/${id}/approve`, {}, {
           headers: { Authorization: `Bearer ${token}` },
         })
         this.$toast.success('Submission approved!')
@@ -213,7 +213,7 @@ export default {
     async deleteSubmission(id) {
       try {
         const token = localStorage.getItem('token');
-        await axios.delete(`http://localhost:5000/api/submissions/${id}`, {
+        await axios.delete(`https://assign-back-675i.onrender.com/api/submissions/${id}`, {
           headers: { Authorization: `Bearer ${token}` },
         });
         this.$toast.success('Submission deleted successfully!');
